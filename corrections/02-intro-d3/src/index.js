@@ -67,7 +67,7 @@ groupe3
     .attr("y", "310")
 
 
-// Changer la couleur du deuxième cercle
+// Changer la couleur du deuxième cercle / le #secondCircle est définit à la ligne 47
 const circle2 = select('#secondCircle').attr("fill", "#E92528");
 circle2.attr("cx", "100")
 circle2.attr("cx", "200")
@@ -91,7 +91,8 @@ const barchart = container.append('svg')
     .attr("width", width)
     .attr("height", height)
 
-
+//le .data charge les données sur les rectangles. 
+//à chaque ligne d'attr il les variable d et i correspond au data et index du tableau
 barchart.selectAll("rect")
     .data(data)
     .join(enter => enter.append("rect")
